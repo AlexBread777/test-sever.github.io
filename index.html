@@ -16,86 +16,91 @@
 </head>
 
 <body>
-    <header class="header" x-data="{isOpen: false}" x-effect="document.body.style.overflow = isOpen ? 'hidden' : 'auto'">
-    <div class="header__container sub-container">
-        <div class="header__wrapper">
-            <div class="header__logo">
-                <a href="index.html">
-                    <img src="img/logos/logo.svg" alt="" srcset="">
-                </a>
+    <header class="header" x-data="{isOpen: false}"
+        x-effect="document.body.style.overflow = isOpen ? 'hidden' : 'auto'">
+        <div class="header__container sub-container">
+            <div class="header__wrapper">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <img src="img/logos/logo.svg" alt="" srcset="">
+                    </a>
+                </div>
+                <div class="header__btns">
+                    <button class="header__btn btn btn-transparent hide-mobile ">
+                        <a href="#"> Войти</a>
+                    </button>
+                    <button class="header__btn btn hide-mobile">
+                        <a href="#">Регистрация</a>
+                    </button>
+                    <button class="header__burger" @click="isOpen = !isOpen">
+                        <img x-show="!isOpen" src="img/icons/menu-burger.svg" alt="">
+                        <img x-show="isOpen" src="img/icons/close-menu-burger.svg" alt="">
+                    </button>
+                </div>
             </div>
+        </div>
+        <div class="header__menu" x-show="isOpen" x-transition:enter="transition-opacity duration-300 ease-out"
+            x-transition:leave="transition-opacity duration-300 ease-in">
+            <nav x-data="{ current: window.location.pathname }" class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="index.html" class="menu__link"
+                            :class="{ 'current-link': current === 'index.html' }">Главная</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="faq.html" class="menu__link"
+                            :class="{ 'current-link': current === 'faq.html' }">FAQ</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="partners.html" class="menu__link"
+                            :class="{ 'current-link': current === 'partners.html' }">Партнерское соглашение</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="policy.html" class="menu__link"
+                            :class="{ 'current-link': current === 'policy.html' }">Политика
+                            конфиденциальности</a>
+                    </li>
+                </ul>
+            </nav>
             <div class="header__btns">
-                <button class="header__btn btn btn-transparent hide-mobile ">
+                <button class="header__btn btn btn-transparent">
                     <a href="#"> Войти</a>
                 </button>
-                <button class="header__btn btn hide-mobile">
+                <button class="header__btn btn">
                     <a href="#">Регистрация</a>
                 </button>
-                <button class="header__burger" @click="isOpen = !isOpen">
-                    <img x-show="!isOpen" src="img/icons/menu-burger.svg" alt="">
-                    <img x-show="isOpen" src="img/icons/close-menu-burger.svg" alt="">
-                </button>
             </div>
         </div>
-    </div>
-    <div class="header__menu" x-show="isOpen" x-transition:enter="transition-opacity duration-300 ease-out"
-        x-transition:leave="transition-opacity duration-300 ease-in">
-        <nav x-data="{ current: window.location.pathname }" class="menu">
-    <ul class="menu__list">
-        <li class="menu__item">
-            <a href="/" class="menu__link" :class="{ 'current-link': current === '/' }">Главная</a>
-        </li>
-        <li class="menu__item">
-            <a href="/faq.html" class="menu__link" :class="{ 'current-link': current === '/faq.html' }">FAQ</a>
-        </li>
-        <li class="menu__item">
-            <a href="/partners.html" class="menu__link"
-                :class="{ 'current-link': current === '/partners.html' }">Партнерское соглашение</a>
-        </li>
-        <li class="menu__item">
-            <a href="/policy.html" class="menu__link" :class="{ 'current-link': current === '/policy.html' }">Политика
-                конфиденциальности</a>
-        </li>
-    </ul>
-</nav>
-        <div class="header__btns">
-            <button class="header__btn btn btn-transparent">
-                <a href="#"> Войти</a>
-            </button>
-            <button class="header__btn btn">
-                <a href="#">Регистрация</a>
-            </button>
-        </div>
-    </div>
-</header>
+    </header>
     <div class="banner">
-    <div class="banner__container base-container">
-        <div class="banner__wrapper">
-            <div class="banner__img">
-                <picture>
-                    <source media="(max-width: 767px )" srcset="img/banner/svr-conceptbanner-v4.33-mobile.png" sizes="">
-                    <img src="img/banner/svr-conceptbanner-v4.33.png" alt="">
-                </picture>
-
-            </div>
-            <div class="banner__inner">
-                <div class="banner__text">Партнерская программа</div>
-                <div class="banner__specific">
+        <div class="banner__container base-container">
+            <div class="banner__wrapper">
+                <div class="banner__img">
                     <picture>
-                        <source media="(min-width: )" srcset="" sizes="">
-                        <img src="img/banner-title-desktop.svg" alt="">
+                        <source media="(max-width: 767px )" srcset="img/banner/svr-conceptbanner-v4.33-mobile.png"
+                            sizes="">
+                        <img src="img/banner/svr-conceptbanner-v4.33.png" alt="">
                     </picture>
+
                 </div>
-                <div class="banner__text">
-                    До <b>60%</b> REVSHARE
+                <div class="banner__inner">
+                    <div class="banner__text">Партнерская программа</div>
+                    <div class="banner__specific">
+                        <picture>
+                            <source media="(min-width: )" srcset="" sizes="">
+                            <img src="img/banner-title-desktop.svg" alt="">
+                        </picture>
+                    </div>
+                    <div class="banner__text">
+                        До <b>60%</b> REVSHARE
+                    </div>
+                    <button class="banner__btn btn">
+                        <a href="#"> Стать партнером</a>
+                    </button>
                 </div>
-                <button class="banner__btn btn">
-                    <a href="#"> Стать партнером</a>
-                </button>
             </div>
         </div>
     </div>
-</div>
     <section class="benefits">
         <div class="benefits__container base-container">
             <div class="benefits__title title">
@@ -280,132 +285,132 @@
         </div>
     </section>
     <footer class="footer">
-    <div class="footer__container base-container">
-        <div class="footer__wrapper">
-            <div class="footer__inner">
-                <div class="footer__item">
-                    <div class="footer__logo">
-                        <img src="img/logos/logo.svg" alt="">
+        <div class="footer__container base-container">
+            <div class="footer__wrapper">
+                <div class="footer__inner">
+                    <div class="footer__item">
+                        <div class="footer__logo">
+                            <img src="img/logos/logo.svg" alt="">
+                        </div>
+                        <button class="footer__btn btn">
+                            <a href="#">Стать партнером</a>
+                        </button>
                     </div>
-                    <button class="footer__btn btn">
-                        <a href="#">Стать партнером</a>
-                    </button>
-                </div>
-                <div class="footer__item">
-                    <nav class="footer__menu">
-                        <ul class="footer__menu-list">
-                            <li class="footer__menu-item">
-                                <a href="faq.html" class="footer__menu-link">FAQ</a>
-                            </li>
-                            <li class="footer__menu-item">
-                                <a href="partners.html" class="footer__menu-link">Партнерское соглашение</a>
-                            </li>
-                            <li class="footer__menu-item">
-                                <a href="policy.html" class="footer__menu-link">Политика конфиденциальности</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+                    <div class="footer__item">
+                        <nav class="footer__menu">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-item">
+                                    <a href="faq.html" class="footer__menu-link">FAQ</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="partners.html" class="footer__menu-link">Партнерское соглашение</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="policy.html" class="footer__menu-link">Политика конфиденциальности</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
 
-                <div class="footer__item">
-                    <div class="footer__subtitle">
-                        Связаться с нами
-                    </div>
-                    <div class="footer__socials">
-                        <div class="footer__box">
-                            <div class="footer__socials-icon">
-                                <img src="img/icons/telegram.svg" alt="">
-                            </div>
-                            <div class="footer__link">
-                                <div class="footer__name">
-                                    Telegram
+                    <div class="footer__item">
+                        <div class="footer__subtitle">
+                            Связаться с нами
+                        </div>
+                        <div class="footer__socials">
+                            <div class="footer__box">
+                                <div class="footer__socials-icon">
+                                    <img src="img/icons/telegram.svg" alt="">
                                 </div>
-                                <div class="footer__path">
-                                    @SEVER_NORTH
+                                <div class="footer__link">
+                                    <div class="footer__name">
+                                        Telegram
+                                    </div>
+                                    <div class="footer__path">
+                                        @SEVER_NORTH
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer__box">
+                                <div class="footer__socials-icon">
+                                    <img src="img/icons/email.svg" alt="">
+                                </div>
+                                <div class="footer__link">
+                                    <div class="footer__name">
+                                        Email
+                                    </div>
+                                    <div class="footer__path">
+                                        partners@sever.com
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="footer__box">
-                            <div class="footer__socials-icon">
-                                <img src="img/icons/email.svg" alt="">
-                            </div>
-                            <div class="footer__link">
-                                <div class="footer__name">
-                                    Email
-                                </div>
-                                <div class="footer__path">
-                                    partners@sever.com
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__label">
+                        <img src="img/icons/rating_r.svg" alt="">
+                    </div>
+                    <div class="footer__label">
+                        <img src="img/icons/brand.svg" alt="">
                     </div>
                 </div>
             </div>
-            <div class="footer__item">
-                <div class="footer__label">
-                    <img src="img/icons/rating_r.svg" alt="">
-                </div>
-                <div class="footer__label">
-                    <img src="img/icons/brand.svg" alt="">
-                </div>
+        </div>
+        <div class="footer-post sub-container">
+            <div class="footer-post__item">
+                <picture>
+                    <source srcset="img/logos/gambling_insider-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/gambling_insider-desktop.svg" alt="" srcset="">
+                </picture>
+
+                <picture>
+                    <source srcset="img/logos/lilith-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/lilith-desktop.svg" alt="" srcset="">
+                </picture>
+
+                <picture>
+                    <source srcset="img/logos/intergame-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/intergame-desktop.svg" alt="" srcset="">
+                </picture>
+
+
+            </div>
+            <div class="footer-post__item">
+                <picture>
+                    <source srcset="img/logos/yolo-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/yolo-desktop.svg" alt="" srcset="">
+                </picture>
+                <picture>
+                    <source srcset="img/logos/burner-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/burner-desktop.svg" alt="" srcset="">
+                </picture>
+                <picture>
+                    <source srcset="img/logos/ikigai-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/ikigai-desktop.svg" alt="" srcset="">
+                </picture>
+
+
+
+            </div>
+            <div class="footer-post__item">
+                <picture>
+                    <source srcset="img/logos/sbc-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/sbc-desktop.svg" alt="" srcset="">
+                </picture>
+                <picture>
+                    <source srcset="img/logos/sigma-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/sigma-desktop.svg" alt="" srcset="">
+                </picture>
+                <picture>
+                    <source srcset="img/logos/hipther-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/hipther-desktop.svg" alt="" srcset="">
+                </picture>
+
+
+
             </div>
         </div>
-    </div>
-    <div class="footer-post sub-container">
-        <div class="footer-post__item">
-            <picture>
-                <source srcset="img/logos/gambling_insider-mobile.svg" media="(max-width: 767px)">
-                <img src="img/logos/gambling_insider-desktop.svg" alt="" srcset="">
-            </picture>
-
-            <picture>
-                <source srcset="img/logos/lilith-mobile.svg" media="(max-width: 767px)">
-                <img src="img/logos/lilith-desktop.svg" alt="" srcset="">
-            </picture>
-
-            <picture>
-                <source srcset="img/logos/intergame-mobile.svg" media="(max-width: 767px)">
-                <img src="img/logos/intergame-desktop.svg" alt="" srcset="">
-            </picture>
-
-
-        </div>
-        <div class="footer-post__item">
-            <picture>
-                <source srcset="img/logos/yolo-mobile.svg" media="(max-width: 767px)">
-                <img src="img/logos/yolo-desktop.svg" alt="" srcset="">
-            </picture>
-            <picture>
-                <source srcset="img/logos/burner-mobile.svg" media="(max-width: 767px)">
-                <img src="img/logos/burner-desktop.svg" alt="" srcset="">
-            </picture>
-            <picture>
-                <source srcset="img/logos/ikigai-mobile.svg" media="(max-width: 767px)">
-                <img src="img/logos/ikigai-desktop.svg" alt="" srcset="">
-            </picture>
-
-
-
-        </div>
-        <div class="footer-post__item">
-            <picture>
-                <source srcset="img/logos/sbc-mobile.svg" media="(max-width: 767px)">
-                <img src="img/logos/sbc-desktop.svg" alt="" srcset="">
-            </picture>
-            <picture>
-                <source srcset="img/logos/sigma-mobile.svg" media="(max-width: 767px)">
-                <img src="img/logos/sigma-desktop.svg" alt="" srcset="">
-            </picture>
-            <picture>
-                <source srcset="img/logos/hipther-mobile.svg" media="(max-width: 767px)">
-                <img src="img/logos/hipther-desktop.svg" alt="" srcset="">
-            </picture>
-
-
-
-        </div>
-    </div>
-</footer>
+    </footer>
 </body>
 
 </html>
