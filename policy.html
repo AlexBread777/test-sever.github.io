@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik+Mono+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+
+    <title>Политика конфиденциальности</title>
+</head>
+
+<body>
+    <header class="header" x-data="{isOpen: false}" x-effect="document.body.style.overflow = isOpen ? 'hidden' : 'auto'">
+    <div class="header__container sub-container">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="img/logos/logo.svg" alt="" srcset="">
+                </a>
+            </div>
+            <div class="header__btns">
+                <button class="header__btn btn btn-transparent hide-mobile ">
+                    <a href="#"> Войти</a>
+                </button>
+                <button class="header__btn btn hide-mobile">
+                    <a href="#">Регистрация</a>
+                </button>
+                <button class="header__burger" @click="isOpen = !isOpen">
+                    <img x-show="!isOpen" src="img/icons/menu-burger.svg" alt="">
+                    <img x-show="isOpen" src="img/icons/close-menu-burger.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="header__menu" x-show="isOpen" x-transition:enter="transition-opacity duration-300 ease-out"
+        x-transition:leave="transition-opacity duration-300 ease-in">
+        <nav x-data="{ current: window.location.pathname }" class="menu">
+    <ul class="menu__list">
+        <li class="menu__item">
+            <a href="/" class="menu__link" :class="{ 'current-link': current === '/' }">Главная</a>
+        </li>
+        <li class="menu__item">
+            <a href="/faq.html" class="menu__link" :class="{ 'current-link': current === '/faq.html' }">FAQ</a>
+        </li>
+        <li class="menu__item">
+            <a href="/partners.html" class="menu__link"
+                :class="{ 'current-link': current === '/partners.html' }">Партнерское соглашение</a>
+        </li>
+        <li class="menu__item">
+            <a href="/policy.html" class="menu__link" :class="{ 'current-link': current === '/policy.html' }">Политика
+                конфиденциальности</a>
+        </li>
+    </ul>
+</nav>
+        <div class="header__btns">
+            <button class="header__btn btn btn-transparent">
+                <a href="#"> Войти</a>
+            </button>
+            <button class="header__btn btn">
+                <a href="#">Регистрация</a>
+            </button>
+        </div>
+    </div>
+</header>
+    <div class="policy">
+        <div class="policy__container base-container">
+            <div class="policy__title title pre-breadcrumbs">
+                Партнерское соглашение
+            </div>
+            <div class="breadcrumbs">
+    <div class="breadcrumbs__wrapper">
+        <a class="breadcrumbs__link" href="/">Главная</a>
+        <span class="breadcrumbs__separator"></span>
+        <a class="breadcrumbs__link current-link" href="#">Партнерское соглашение</a>
+    </div>
+</div>
+            <div class="policy__wrapper">
+                <div class="policy__item">
+                    <div class="policy__text text-14">
+                        Мы уважаем Ваше право на конфиденциальность и стремимся обеспечить защиту Ваших персональных
+                        данных. Настоящая Политика определяет, как обрабатываются минимальные персональные данные
+                        пользователей Веб-сайта svr.partners (далее «Веб-сайт»)</div>
+                </div>
+                <div class="policy__item">
+                    <div class="policy__subtitle">
+                        Сбор и обработка данных 
+                    </div>
+                    <div class="policy__text">
+                        Мы можем собирать и обрабатывать следующую информацию о Вас:
+                    </div>
+                    <ul class="policy__list">
+                        <li class="policy__list-item">
+                            Контактные данные, такие как адрес электронной почты
+                        </li>
+                    </ul>
+                    <div class="policy__text">
+                        Информация, указанная при регистрации на Веб-сайте, используется исключительно для обеспечения
+                        работы сервиса и связи с Вами. </div>
+                </div>
+                <div class="policy__item">
+                    <div class="policy__subtitle">
+                        Использование файлов cookie
+                    </div>
+                    <div class="policy__text">
+                        Мы используем файлы “cookie” для:
+                    </div>
+                    <ul class="policy__list">
+                        <li class="policy__list-item">
+                            Улучшения работы Веб-сайта
+                        </li>
+                        <li class="policy__list-item">
+                            Сохранения информации о Вашей учётной записи
+                        </li>
+                        <li class="policy__list-item">
+                            Анализа трафика и улучшения качества наших услуг
+                        </li>
+                    </ul>
+                    <div class="policy__text">
+                        Вы можете отказаться от файлов “cookie” в настройках браузера, но это может ограничить
+                        функциональность Веб-сайта</div>
+                </div>
+                <div class="policy__item">
+                    <div class="policy__subtitle">
+                        Использование данных
+                    </div>
+                    <div class="policy__text">
+                        Мы используем Ваши контактные данные исключительно для связи с Вами и предоставления Вам
+                        информации о работе сервиса
+                    </div>
+                </div>
+                <div class="policy__item">
+                    <div class="policy__subtitle">
+                        Защита данных
+                    </div>
+                    <div class="policy__text">
+                        Мы используем современные технические меры для защиты Ваших данных, включая защищённые серверы и
+                        доступ только для авторизованных специалистов
+                    </div>
+                </div>
+                <div class="policy__item">
+                    <div class="policy__subtitle">
+                        Ваши права
+                    </div>
+                    <div class="policy__text">
+                        Вы имеете право:
+                    </div>
+                    <ul class="policy__list">
+                        <li class="policy__list-item">
+                            Обратиться к нам для получения информации о Ваших контактных данных;
+                        </li>
+                        <li class="policy__list-item">
+                            Внести изменения или запросить удаление данных; </li>
+                        <li class="policy__list-item">
+                            Отказаться от получения информационных сообщений. </li>
+                    </ul>
+                </div>
+                <div class="policy__item">
+                    <div class="policy__subtitle">
+                        Изменения в Политике
+                    </div>
+                    <div class="policy__text">
+                        Мы оставляем за собой право вносить изменения в настоящую Политику. Актуальная версия всегда
+                        доступна на Веб-сайте svr.partners
+                    </div>
+                </div>
+                <div class="policy__item">
+                    <div class="policy__subtitle">
+                        Контакты </div>
+                    <div class="policy__text">
+                        Если у Вас есть вопросы или пожелания, свяжитесь с нашей службой поддержки по адресу:
+                        <br><b> affiliates@svr.partners</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__container base-container">
+            <div class="footer__wrapper">
+                <div class="footer__inner">
+                    <div class="footer__item">
+                        <div class="footer__logo">
+                            <img src="img/logos/logo.svg" alt="">
+                        </div>
+                        <button class="footer__btn btn">
+                            <a href="#">Стать партнером</a>
+                        </button>
+                    </div>
+                    <div class="footer__item">
+                        <nav class="footer__menu">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-item">
+                                    <a href="faq.html" class="footer__menu-link">FAQ</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="partners.html" class="footer__menu-link">Партнерское соглашение</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="policy.html" class="footer__menu-link">Политика конфиденциальности</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+    
+                    <div class="footer__item">
+                        <div class="footer__subtitle">
+                            Связаться с нами
+                        </div>
+                        <div class="footer__socials">
+                            <div class="footer__box">
+                                <div class="footer__socials-icon">
+                                    <img src="img/icons/telegram.svg" alt="">
+                                </div>
+                                <div class="footer__link">
+                                    <div class="footer__name">
+                                        Telegram
+                                    </div>
+                                    <div class="footer__path">
+                                        @SEVER_NORTH
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer__box">
+                                <div class="footer__socials-icon">
+                                    <img src="img/icons/email.svg" alt="">
+                                </div>
+                                <div class="footer__link">
+                                    <div class="footer__name">
+                                        Email
+                                    </div>
+                                    <div class="footer__path">
+                                        partners@sever.com
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__label">
+                        <img src="img/icons/rating_r.svg" alt="">
+                    </div>
+                    <div class="footer__label">
+                        <img src="img/icons/brand.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-post sub-container">
+            <div class="footer-post__item">
+                <picture>
+                    <source srcset="img/logos/gambling_insider-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/gambling_insider-desktop.svg" alt="" srcset="">
+                </picture>
+    
+                <picture>
+                    <source srcset="img/logos/lilith-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/lilith-desktop.svg" alt="" srcset="">
+                </picture>
+    
+                <picture>
+                    <source srcset="img/logos/intergame-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/intergame-desktop.svg" alt="" srcset="">
+                </picture>
+    
+    
+            </div>
+            <div class="footer-post__item">
+                <picture>
+                    <source srcset="img/logos/yolo-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/yolo-desktop.svg" alt="" srcset="">
+                </picture>
+                <picture>
+                    <source srcset="img/logos/burner-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/burner-desktop.svg" alt="" srcset="">
+                </picture>
+                <picture>
+                    <source srcset="img/logos/ikigai-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/ikigai-desktop.svg" alt="" srcset="">
+                </picture>
+    
+    
+    
+            </div>
+            <div class="footer-post__item">
+                <picture>
+                    <source srcset="img/logos/sbc-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/sbc-desktop.svg" alt="" srcset="">
+                </picture>
+                <picture>
+                    <source srcset="img/logos/sigma-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/sigma-desktop.svg" alt="" srcset="">
+                </picture>
+                <picture>
+                    <source srcset="img/logos/hipther-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/hipther-desktop.svg" alt="" srcset="">
+                </picture>
+    
+    
+    
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

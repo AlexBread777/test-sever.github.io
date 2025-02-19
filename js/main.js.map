@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.js","script.js"],"names":["document","addEventListener","console","log"],"mappings":"AAAA,aCCAA,SAASC,iBAAiB,oBAAoB,WAC1CC,QAAQC,IAAI,mBACd","file":"main.js","sourcesContent":[null,"\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n    console.log(\"Hello from Gulp!\");\n  });\n  "]}

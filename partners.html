@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik+Mono+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+
+    <title>Партнерское соглашение</title>
+</head>
+
+<body>
+
+    <header class="header" x-data="{isOpen: false}" x-effect="document.body.style.overflow = isOpen ? 'hidden' : 'auto'">
+    <div class="header__container sub-container">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="img/logos/logo.svg" alt="" srcset="">
+                </a>
+            </div>
+            <div class="header__btns">
+                <button class="header__btn btn btn-transparent hide-mobile ">
+                    <a href="#"> Войти</a>
+                </button>
+                <button class="header__btn btn hide-mobile">
+                    <a href="#">Регистрация</a>
+                </button>
+                <button class="header__burger" @click="isOpen = !isOpen">
+                    <img x-show="!isOpen" src="img/icons/menu-burger.svg" alt="">
+                    <img x-show="isOpen" src="img/icons/close-menu-burger.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="header__menu" x-show="isOpen" x-transition:enter="transition-opacity duration-300 ease-out"
+        x-transition:leave="transition-opacity duration-300 ease-in">
+        <nav x-data="{ current: window.location.pathname }" class="menu">
+    <ul class="menu__list">
+        <li class="menu__item">
+            <a href="/" class="menu__link" :class="{ 'current-link': current === '/' }">Главная</a>
+        </li>
+        <li class="menu__item">
+            <a href="/faq.html" class="menu__link" :class="{ 'current-link': current === '/faq.html' }">FAQ</a>
+        </li>
+        <li class="menu__item">
+            <a href="/partners.html" class="menu__link"
+                :class="{ 'current-link': current === '/partners.html' }">Партнерское соглашение</a>
+        </li>
+        <li class="menu__item">
+            <a href="/policy.html" class="menu__link" :class="{ 'current-link': current === '/policy.html' }">Политика
+                конфиденциальности</a>
+        </li>
+    </ul>
+</nav>
+        <div class="header__btns">
+            <button class="header__btn btn btn-transparent">
+                <a href="#"> Войти</a>
+            </button>
+            <button class="header__btn btn">
+                <a href="#">Регистрация</a>
+            </button>
+        </div>
+    </div>
+</header>
+
+    <section class="partner">
+        <div class="partner__container base-container">
+            <div class="partner__title title pre-breadcrumbs">
+                Партнерское соглашение
+            </div>
+            <div class="breadcrumbs">
+    <div class="breadcrumbs__wrapper">
+        <a class="breadcrumbs__link" href="/">Главная</a>
+        <span class="breadcrumbs__separator"></span>
+        <a class="breadcrumbs__link current-link" href="#">Партнерское соглашение</a>
+    </div>
+</div>
+            <div class="partner__wrapper">
+                <ul class="numeric-decimals">
+                    <li>
+                        <span>Термины и определения</span>
+                        <ul>
+                            <li> Партнёр — веб-мастер (физическое лицо, достигшее 18 лет, или юридическое лицо),
+                                принимающий условия настоящего документа и работающий над продвижением продукта
+                                Партнёрской программы Sever Partners в сети Интернет.</li>
+                            <li>Партнёрская программа — техническая маркетинговая платформа Sever Partners,
+                                предоставляющая рекламные материалы веб-мастерам для продвижения продукта в сети
+                                Интернет.</li>
+                            <li>Продукт — рекламируемый проект казино в сети Интернет.</li>
+                            <li>Рекламные материалы — инструменты, предоставляемые Партнёрами для продвижения продукта.
+                            </li>
+                            <li>Трафик — совокупность игроков, привлечённых в результате размещения рекламных материалов
+                                в сети Интернет.</li>
+                            <li>
+                                Revenue Share — процент от чистого дохода Продукта, полученного за счёт привлечённых
+                                игроков.
+                            </li>
+                            <li><span>Формула расчёта Revenue Share: <b>RevShare = AffiliateNGR × Partner RevShare
+                                        %</b>, где
+                                    AffiliateNGR рассчитывается как:</span>
+                                <ul class="without-counter">
+                                    <li>GGR (Gross Gaming Revenue) — валовой доход казино, разница между ставками
+                                        игроков и их выигрышами. Включает все ставки, сделанные игроками, за вычетом их
+                                        выигрышей.</li>
+                                    <li>Bonus Turnover — оборот по бонусам, включающий сумму всех бонусов,
+                                        предоставленных игрокам, независимо от их использования.</li>
+                                    <li>Admin Fee — административный сбор, покрывающий операционные расходы, включая
+                                        затраты на обслуживание платформы, лицензирование и другие операционные затраты.
+                                    </li>
+                                    <li>Cashback — сумма возврата средств игрокам в рамках системы лояльности.
+                                        Учитывается как уменьшение GGR.</li>
+                                    <li>Points Exchange — стоимость баллов, обменянных игроками на реальные деньги. Учёт
+                                        производится в соответствии с установленным курсом программы лояльности.</li>
+                                </ul>
+                                AffiliateNGR представляет собой чистый доход казино, доступный для партнёра и
+                                отображаемый в отчёте «Прибыль» после вычета всех операционных расходов.
+                                <div>
+                                    Итоговая формула: <b>AffiliateNGR = GGR - Bonus Turnover - Admin Fee - Cashback -
+                                        Points
+                                        Exchange.</b>
+                                </div>
+                            </li>
+                            <li>
+                                Активный игрок — игрок, который регулярно возвращается в Продукт, вносит депозиты и
+                                играет на реальные деньги.
+                            </li>
+                            <li>
+                                Офферы — правила и условия (включая ограничения и вознаграждения), регулирующие
+                                продвижение Продукта.
+                            </li>
+                            <li>
+                                Отчётный период — временной промежуток, в течение которого происходит накопление и
+                                расчёт заработка Партнёра. Обычно отчётный период равен одному месяцу, однако может быть
+                                разделён на более короткие промежутки, например, половину календарного месяца.
+                            </li>
+                            <li>
+                                Холд — период проверки активности игрока и его соответствия правилам Продукта и
+                                Партнёрской программы. Холд длится в среднем от 15 до 30 дней.
+                            </li>
+                            <li>
+                                Период Postclick — период сохранения файлов cookie после перехода игрока по рекламной
+                                ссылке. Для Sever Partners период Postclick составляет 30 дней. Если игрок
+                                регистрируется в течение этого времени, он закрепляется за Партнёром.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Принципы работы и безопасность
+                        <ul>
+                            <li>Партнёрская программа Sever Partners оставляет за собой право изменять правила без
+                                согласия и уведомления Партнёра. Однако Партнёр, приступая к работе, подтверждает своё
+                                согласие с текущими условиями и обязательство регулярно проверять обновления на
+                                официальном сайте программы.</li>
+                            <li>Участие в Партнёрской программе доступно только физическим и юридическим лицам,
+                                достигшим 18 лет.</li>
+                            <li>
+                                Партнёр несёт полную ответственность за сохранность логина и пароля для доступа к
+                                системе. Использование двухфакторной аутентификации рекомендуется, но не является
+                                обязательным.
+                            </li>
+                            <li>
+                                Продажа или передача аккаунтов третьим лицам без предварительного согласования с
+                                Партнёрской программой строго запрещены.
+                            </li>
+                            <li>
+                                Участникам программы запрещено регистрировать аккаунты по собственным реферальным
+                                ссылкам или иметь более одного аккаунта без согласования.
+                            </li>
+                            <li>
+                                Партнёрам запрещается использовать кукистаффинг и схожие методы манипуляции.
+                            </li>
+                            <li>
+                                Вся переписка с администрацией или службой поддержки считается конфиденциальной.
+                                Публикация таких данных запрещена.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Трафик и ограничения
+                        <ul>
+                            <li>
+                                Партнёрская программа оставляет за собой право запрашивать информацию об источниках
+                                трафика. В случае отказа предоставить данные сотрудничество может быть приостановлено.
+                            </li>
+                            <li>
+                                Использование мотивированного трафика запрещено. При выявлении нарушений аккаунт может
+                                быть заблокирован без выплаты средств.
+                            </li>
+                            <li>
+                                Брендированный трафик принимается только по согласованию с аффилейт-менеджером.
+                            </li>
+                            <li>
+                                Запрещено использовать изображения политиков, государственные темы или дропы
+                                благотворительных фондов в рекламных материалах.
+                            </li>
+                            <li>
+                                В случае использования рекламных материалов на сторонних платформах, Партнёр обязан
+                                предоставить скриншоты статистики и другие подтверждающие данные.
+                            </li>
+                            <li>
+                                апрещено использование доменов в зонах .ru и .рф для SEO-источников, обзорников и
+                                лендингов.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Комиссионная структура
+                        <ul>
+                            <li>Партнёрская программа Sever Partners предлагает комиссионную модель RevShare с
+                                динамическими ставками от 35% до 60% в зависимости от договорённости. В период акций
+                                ставки могут достигать максимального уровня. Для подробностей обращайтесь к вашему
+                                аффилейт-менеджеру.</li>
+                            <li>Реферальные бонусы составляют от 3% до 5% от прибыли новых Партнёров, привлечённых по
+                                реферальной ссылке.</li>
+                            <li>
+                                Отрицательный баланс не переносится в следующий расчётный период.
+                            </li>
+                            <li>
+                                При отсутствии активности Партнёра (привлечения новых игроков) более 6 месяцев условия
+                                сотрудничества могут быть пересмотрены.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Минимальная сумма вывода и порядок расчётов
+                        <ul>
+                            <li>
+                                Минимальная сумма вывода составляет 50 евро.
+                            </li>
+                            <li>
+                                Выплаты проводятся в течение 5 рабочих дней после окончания расчётного периода, при
+                                условии заполнения платёжных данных в личном кабинете.
+                            </li>
+                            <li>
+                                Отчётный период составляет один месяц, с возможным разделением на более короткие
+                                промежутки по согласованию с администрацией.
+                            </li>
+                            <li>
+                                Если на балансе Партнёра средства остаются более 6 месяцев без вывода, они списываются.
+                                Ещё через 6 месяцев аккаунт удаляется.
+                            </li>
+                            <li>
+                                При первой выплате может быть проведена дополнительная проверка активности привлечённых
+                                игроков.
+                            </li>
+                            <li>
+                                Задержки выплат (холд) применяются по усмотрению администрации в случае подозрительной
+                                активности.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Политика использования доменов
+                        <ul>
+                            <li>
+                                Использование доменов должно соответствовать целям Партнёрской программы. Регистрация
+                                доменов в санкционных юрисдикциях запрещена.
+                            </li>
+                            <li>
+                                Партнёр обязуется предоставлять точную информацию о содержании домена и использовать его
+                                только для разрешённых целей.
+                            </li>
+                            <li>
+                                В случае выявления нарушений домен может быть отключён от инфраструктуры Партнёрской
+                                программы.
+                            </li>
+                            <li>
+                                Запрещено использование контента третьих лиц для наполнения доменов, связанных с
+                                брендом.
+                            </li>
+                            <li>
+                                Партнёрская программа оставляет за собой право проводить проверки использования доменов
+                                и связанных с ними ресурсов.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Спорные ситуации
+                        <ul>
+                            <li>
+                                Все спорные вопросы решаются путём переговоров с готовностью обеих сторон к компромиссу.
+                            </li>
+                            <li>
+                                Обращения принимаются в письменной форме через электронную почту. Срок рассмотрения
+                                претензий составляет до 30 рабочих дней.
+                            </li>
+                            <li>
+                                Обращения, отправленные через мессенджеры, не считаются официальными и не принимаются к
+                                рассмотрению.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Дополнительные положения
+                        <ul>
+                            <li>Использование рекламных материалов возможно только с предварительного согласования с
+                                Партнёрской программой.</li>
+                            <li>Все рекламные материалы должны соответствовать стандартам качества и требованиям
+                                программы.</li>
+                            <li>
+                                Нарушения любого из вышеуказанных пунктов могут привести к прекращению сотрудничества и
+                                блокировке аккаунта без выплаты средств.
+                            </li>
+                            <li>
+                                Все данные, предоставленные Партнёром, должны быть достоверными. В случае обнаружения
+                                ложной информации сотрудничество может быть прекращено.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container base-container">
+            <div class="footer__wrapper">
+                <div class="footer__inner">
+                    <div class="footer__item">
+                        <div class="footer__logo">
+                            <img src="img/logos/logo.svg" alt="">
+                        </div>
+                        <button class="footer__btn btn">
+                            <a href="#">Стать партнером</a>
+                        </button>
+                    </div>
+                    <div class="footer__item">
+                        <nav class="footer__menu">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-item">
+                                    <a href="faq.html" class="footer__menu-link">FAQ</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="partners.html" class="footer__menu-link">Партнерское соглашение</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a href="policy.html" class="footer__menu-link">Политика конфиденциальности</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+    
+                    <div class="footer__item">
+                        <div class="footer__subtitle">
+                            Связаться с нами
+                        </div>
+                        <div class="footer__socials">
+                            <div class="footer__box">
+                                <div class="footer__socials-icon">
+                                    <img src="img/icons/telegram.svg" alt="">
+                                </div>
+                                <div class="footer__link">
+                                    <div class="footer__name">
+                                        Telegram
+                                    </div>
+                                    <div class="footer__path">
+                                        @SEVER_NORTH
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer__box">
+                                <div class="footer__socials-icon">
+                                    <img src="img/icons/email.svg" alt="">
+                                </div>
+                                <div class="footer__link">
+                                    <div class="footer__name">
+                                        Email
+                                    </div>
+                                    <div class="footer__path">
+                                        partners@sever.com
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__label">
+                        <img src="img/icons/rating_r.svg" alt="">
+                    </div>
+                    <div class="footer__label">
+                        <img src="img/icons/brand.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-post sub-container">
+            <div class="footer-post__item">
+                <picture>
+                    <source srcset="img/logos/gambling_insider-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/gambling_insider-desktop.svg" alt="" srcset="">
+                </picture>
+    
+                <picture>
+                    <source srcset="img/logos/lilith-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/lilith-desktop.svg" alt="" srcset="">
+                </picture>
+    
+                <picture>
+                    <source srcset="img/logos/intergame-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/intergame-desktop.svg" alt="" srcset="">
+                </picture>
+    
+    
+            </div>
+            <div class="footer-post__item">
+                <picture>
+                    <source srcset="img/logos/yolo-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/yolo-desktop.svg" alt="" srcset="">
+                </picture>
+                <picture>
+                    <source srcset="img/logos/burner-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/burner-desktop.svg" alt="" srcset="">
+                </picture>
+                <picture>
+                    <source srcset="img/logos/ikigai-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/ikigai-desktop.svg" alt="" srcset="">
+                </picture>
+    
+    
+    
+            </div>
+            <div class="footer-post__item">
+                <picture>
+                    <source srcset="img/logos/sbc-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/sbc-desktop.svg" alt="" srcset="">
+                </picture>
+                <picture>
+                    <source srcset="img/logos/sigma-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/sigma-desktop.svg" alt="" srcset="">
+                </picture>
+                <picture>
+                    <source srcset="img/logos/hipther-mobile.svg" media="(max-width: 767px)">
+                    <img src="img/logos/hipther-desktop.svg" alt="" srcset="">
+                </picture>
+    
+    
+    
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
